@@ -10,7 +10,15 @@
     "permissions": ["activeTab", "scripting"],
     "icons": {
       "48": "icon.png"
-    }
-  }
+    },
+    "content_scripts": [
+      {
+         "matches": ["*://www.linkedin.com/in/*"],
+         "js": ["content.js"],
+         "run_at": "document_idle" 
+      }
+    ]
+}
+
 
   
